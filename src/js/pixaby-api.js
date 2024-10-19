@@ -1,5 +1,5 @@
 const API_KEY = '46595178-4dac5182a4d6048d037515019';
-const url = 'https://pixabay.com/api?';
+const url = 'https://pixabay.com/api/?';
 
 const findPhotos = async search => {
   const options = {
@@ -12,7 +12,6 @@ const findPhotos = async search => {
 
   const queryString = new URLSearchParams(options).toString();
   const searhUrl = url + queryString;
-
   const response = await fetch(searhUrl);
   return response.json();
 };
